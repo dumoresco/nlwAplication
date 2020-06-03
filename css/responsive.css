@@ -17,6 +17,15 @@
     #page-home main{
         align-items: center;
     }
+    #page-searchResults .cards{
+        grid-template-columns: 1fr;
+    }
+    #page-searchResults .card img{
+        height: 200px;
+    }
+    .itens-grid{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media(min-width:1700px){
@@ -28,4 +37,49 @@
     #page-home{
         background-position-y: 100px;
     }
+}
+
+@media(max-width:640px ){
+    .itens-grid{
+        grid-template-columns: 1fr;
+    }
+    form button{
+        width: 100%;
+    }
+}
+
+@media(max-width:770px ){
+    form .field-group{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    form .field-group .field + .field{
+        margin-left: 0px;
+        width: 100%;
+    }
+    select{
+        width: 100%;
+    }
+    #page-home header a{
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media(max-width:320px ){
+    form .field-group{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    form .field-group .field + .field{
+        margin-left: 0px;
+        width: 100%;
+    }
+    input, select{
+        width: 100%;
+    }
+
 }
